@@ -41,10 +41,10 @@
         <img src="./assets/profile-pic.png" alt="Aayush Parikh profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hey, I'm</p>
-        <h1 class="title">Aayush Parikh</h1>
-        <p class="section__text__p2">Software Developer</p>
-        <div class="btn-container">
+        <p class="section__text__p1" data-animate="fade-up" data-delay="200">Hey, I'm</p>
+        <h1 class="title" data-animate="fade-up" data-delay="400">Aayush Parikh</h1>
+        <p class="section__text__p2" data-animate="fade-up" data-delay="600">Software Developer</p>
+        <div class="btn-container" data-animate="fade-up" data-delay="800">
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/Aayush_Parikh_Resume.pdf')"
@@ -55,7 +55,7 @@
             Contact Info
           </button>
         </div>
-        <div id="socials-container">
+        <div id="socials-container" data-animate="fade-up" data-delay="1000">
           <img
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
@@ -72,10 +72,10 @@
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+      <p class="section__text__p1" data-animate="fade-up">Get To Know More</p>
+      <h1 class="title" data-animate="fade-up" data-delay="100">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
+        <div class="section__pic-container" data-animate="fade-left" data-delay="200">
           <img
             src="./assets/my-about-pic.jpeg"
             alt="Profile picture"
@@ -84,7 +84,7 @@
         </div>
         <div class="about-details-container">
           <div class="about-containers">
-            <div class="details-container">
+            <div class="details-container" data-animate="fade-right" data-delay="300">
               <img
                 src="./assets/education.png"
                 alt="Experience icon"
@@ -93,7 +93,7 @@
               <h3>Masters</h3>
               <p>Arziona State University<br />Computer Science</p>
             </div>
-            <div class="details-container">
+            <div class="details-container" data-animate="fade-right" data-delay="500">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
@@ -103,7 +103,7 @@
               <p>University of Mumbai<br />Computer Engineering</p>
             </div>
           </div>
-          <div class="text-container">
+          <div class="text-container" data-animate="fade-up" data-delay="600">
             <p>
               I am Aayush Parikh, a passionate and driven Computer Science graduate student at Arizona State University, with an anticipated graduation in May 2026. My academic journey, paired with hands-on experience, has shaped my expertise in Full-stackWeb Development, Mobile Development, and Artificial Intelligence.
             </p>
@@ -118,11 +118,20 @@
       />
     </section>
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <p class="section__text__p1" data-animate="fade-up">Explore My</p>
+      <h1 class="title" data-animate="fade-up" data-delay="100">Experience</h1>
+      <div class="text-container" data-animate="fade-up" data-delay="200">
+        <p>
+          I've gained hands-on industry experience through three software engineering internships. At Brinks Home, I built a low-latency checkout flow with Vue.js and TypeScript, and developed backend API endpoints using RabbitMQ to improve system fault tolerance and performance. At Acodesoft Technologies, I engineered full-stack web applications with Node.js and React.js, deployed scalable microservices on AWS EC2, and architected CI/CD pipelines with Jenkins that accelerated code-to-production speed by 40%. Earlier, at TechData Solutions, I designed a high-throughput C++ data ingestion layer for real-time streams, reducing end-to-end latency by 20% through memory and cache optimizations.
+        </p>
+      </div>
       <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
+        <div class="about-containers experience-skills-row">
+          <div
+            class="details-container experience-skills-box"
+            data-animate="fade-up"
+            data-delay="300"
+          >
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
@@ -154,7 +163,18 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Javascript</h3>
+                  <h3>JavaScript</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
                   <p>Experienced</p>
                 </div>
               </article>
@@ -176,7 +196,18 @@
                   class="icon"
                 />
                 <div>
-                  <h3>ReactNative</h3>
+                  <h3>React Native</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Vue.js</h3>
                   <p>Experienced</p>
                 </div>
               </article>
@@ -187,14 +218,14 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Android Studio</h3>
+                  <h3>Angular</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
+            <h2 class="experience-sub-title experience-sub-title--split">
+              Backend Development
+            </h2>
             <div class="article-container">
               <article>
                 <img
@@ -203,7 +234,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>SQL</h3>
+                  <h3>Python</h3>
                   <p>Experienced</p>
                 </div>
               </article>
@@ -221,6 +252,50 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Intermediate icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Go</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
                   alt="Intermediate icon"
                   class="icon"
                 />
@@ -232,34 +307,12 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
                   alt="Intermediate icon"
                   class="icon"
                 />
                 <div>
                   <h3>Kotlin</h3>
                   <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Experienced</p>
                 </div>
               </article>
             </div>
@@ -274,11 +327,11 @@
       />
     </section>
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <p class="section__text__p1" data-animate="fade-up">Browse My Recent</p>
+      <h1 class="title" data-animate="fade-up" data-delay="100">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-animate="pop-in" data-delay="200">
             <div class="article-container">
               <img
                 src="./assets/project-1.jpeg"
@@ -302,7 +355,7 @@
               </button> -->
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-animate="pop-in" data-delay="400">
             <div class="article-container">
               <img
                 src="./assets/IMG_5311.PNG"
@@ -326,7 +379,7 @@
               </button> -->
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container color-container" data-animate="pop-in" data-delay="600">
             <div class="article-container">
               <img
                 src="./assets/project-3.png"
@@ -360,9 +413,9 @@
       />
     </section>
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
+      <p class="section__text__p1" data-animate="fade-up">Get in Touch</p>
+      <h1 class="title" data-animate="fade-up" data-delay="100">Contact Me</h1>
+      <div class="contact-info-upper-container" data-animate="scale-in" data-delay="300">
         <div class="contact-info-container">
           <img
             src="./assets/email.png"
@@ -381,7 +434,7 @@
         </div>
       </div>
     </section>
-    <footer>
+    <footer data-animate="fade-up">
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
