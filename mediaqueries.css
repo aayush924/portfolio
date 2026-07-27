@@ -19,8 +19,7 @@
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
+  #experience {
     margin-top: 2rem;
   }
   #profile,
@@ -105,7 +104,36 @@
   .title {
     font-size: 2rem;
   }
-  .text-container {
-    text-align: justify;
+  #experience .experience-intro {
+    text-align: left;
+    font-size: 0.98rem;
+  }
+  #experience .experience-timeline {
+    padding-left: 0.35rem;
+    gap: 1rem;
+  }
+  #experience .timeline-entry {
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+  #experience .timeline-card {
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+  }
+  #experience .timeline-card__header,
+  #experience .timeline-subrole__row {
+    flex-direction: column;
+  }
+  #experience .timeline-duration {
+    white-space: normal;
+    padding-top: 0;
+  }
+  #experience .timeline-role {
+    font-size: 1.3rem;
+  }
+  #experience .timeline-summary,
+  #experience .timeline-highlights li {
+    font-size: 0.96rem;
+    line-height: 1.65;
   }
 }

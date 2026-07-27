@@ -25,38 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animatedElements.forEach((el) => observer.observe(el));
 
-  const experienceArticles = document.querySelectorAll(
-    "#experience article"
-  );
-  experienceArticles.forEach((article, index) => {
-    article.style.opacity = "0";
-    article.style.transform = "translateY(20px)";
-    article.style.transition = `opacity 0.4s ease ${index * 0.06}s, transform 0.4s ease ${index * 0.06}s`;
-  });
-
-  const articleObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const articles = entry.target.querySelectorAll("article");
-          articles.forEach((article) => {
-            article.style.opacity = "1";
-            article.style.transform = "translateY(0)";
-          });
-          articleObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  const experienceContainers = document.querySelectorAll(
-    "#experience .details-container"
-  );
-  experienceContainers.forEach((container) =>
-    articleObserver.observe(container)
-  );
-
   document.querySelectorAll(".color-container").forEach((card) => {
     card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();

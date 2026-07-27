@@ -317,61 +317,191 @@ section {
 
 #experience {
   position: relative;
+  height: fit-content;
 }
 
-.text-container {
-  margin-top: 1.5rem;
+#experience .experience-intro {
+  max-width: 72ch;
+  margin: 1rem auto 0;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgb(95, 95, 95);
 }
 
-.text-container p {
-  text-align: justify;
-}
-
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-.experience-details-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#experience .experience-skills-row {
-  width: 100%;
-  justify-content: center;
-}
-
-#experience .experience-skills-box {
-  flex: 1 1 100%;
-  max-width: 100%;
-}
-
-#experience .experience-sub-title--split {
+#experience .experience-timeline {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
   margin-top: 2.5rem;
+  padding-left: 1.25rem;
 }
 
-.article-container {
+#experience .timeline-entry {
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+}
+
+#experience .timeline-rail {
+  position: relative;
+  align-self: stretch;
+  justify-self: center;
+  width: 2.4rem;
+  min-height: 100%;
+  z-index: 1;
+}
+
+#experience .timeline-line--top {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    rgba(53, 53, 53, 0.22),
+    rgba(53, 53, 53, 0.08)
+  );
+}
+
+#experience .timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  border-radius: 50%;
+  background: rgb(25, 25, 25);
+  box-shadow: 0 0 0 0.45rem rgba(53, 53, 53, 0.08);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#experience .timeline-line {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    rgba(53, 53, 53, 0.22),
+    rgba(53, 53, 53, 0.08)
+  );
+}
+
+#experience .timeline-line--bottom {
+  top: 50%;
+  bottom: 0;
+}
+
+#experience .timeline-entry:first-child .timeline-line--top {
+  visibility: hidden;
+}
+
+#experience .timeline-entry:last-child .timeline-line--bottom {
+  visibility: hidden;
+}
+
+#experience .timeline-card {
+  padding: 1.5rem 1.6rem;
+  border-radius: 1.65rem;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 40px rgba(15, 15, 15, 0.08);
+}
+
+#experience .timeline-entry--featured .timeline-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), #f8f8f8);
+  box-shadow: 0 24px 55px rgba(15, 15, 15, 0.1);
+}
+
+#experience .timeline-card__header {
   display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
 }
 
-article {
+#experience .timeline-company {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: rgb(110, 110, 110);
+  margin-bottom: 0.35rem;
+}
+
+#experience .timeline-role {
+  font-size: 1.65rem;
+  line-height: 1.1;
+  color: rgb(20, 20, 20);
+}
+
+#experience .timeline-duration {
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 0.98rem;
+  padding-top: 0.25rem;
+}
+
+#experience .timeline-duration--muted {
+  font-weight: 400;
+  color: rgb(125, 125, 125);
+}
+
+#experience .timeline-duration--emphasis {
+  font-weight: 600;
+  color: rgb(96, 96, 96);
+}
+
+#experience .timeline-meta {
+  margin-top: 0.4rem;
+  color: rgb(125, 125, 125);
+  font-size: 0.95rem;
+}
+
+#experience .timeline-summary {
+  margin-top: 1rem;
+  color: rgb(78, 78, 78);
+  line-height: 1.8;
+  text-align: left;
+}
+
+#experience .timeline-summary--featured {
+  font-size: 1.03rem;
+}
+
+#experience .timeline-subrole {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(53, 53, 53, 0.08);
+}
+
+#experience .timeline-subrole__row {
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 600;
+  color: rgb(52, 52, 52);
 }
 
-article .icon {
-  cursor: default;
+#experience .timeline-highlights {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+#experience .timeline-highlights li {
+  color: rgb(70, 70, 70);
+  line-height: 1.7;
+}
+
+#experience .timeline-line--end {
+  display: none;
 }
 
 /* PROJECTS SECTION */
